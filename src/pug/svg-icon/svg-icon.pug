@@ -1,0 +1,11 @@
+mixin svg-icon
+	-
+		var icon = attributes['svg-icon-name']
+
+	case icon
+		when 'arrow-down'
+			include svg/arrow-down
+		when 'shield'
+			include svg/shield
+		when 'phone'
+			include svg/phone
