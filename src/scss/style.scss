@@ -1,25 +1,24 @@
 @use 'sass:math';
+
 :root{
-	--color-master: #000000;
-	--color-secondary: #ffffff;
-	--color-button: #39AFBF;
-	--color-link: #0066FF;
-	--color-footer-text: #8F8F8F;
-	--color-bg-body:#F2F2F2;
-	--color-bg-services:#DEF5FF;
+	--color-master: #ffffff;
+	--color-secondary: #4ABCEC;
+	--color-bg-body:#032838;
+	--ff-master: 'Avenir Next Cyr';
 }
 
 @import '../../node_modules/bootstrap/dist/css/bootstrap-grid';
 @import '../../node_modules/bootstrap/dist/css/bootstrap-reboot';
 
+@import '../font/stylesheet';
+
 body{
-	font-family: 'Abel', Arial, Helvetica, sans-serif;
+	font-family: var(--ff-master), Arial, Helvetica, sans-serif;
 	background-color: var(--color-bg-body);
 }
 
 @import 'mixins';
 
-@import 'font';
 
 @import '../components/popup';
 @import '../components/1_header/header';

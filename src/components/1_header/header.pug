@@ -1,6 +1,8 @@
 include ../../pug/svg-icon/svg-icon.pug
-header.header
+header.header.container
 	.header__logo.logo
+		img.logo__img(src="../../img/logo.svg" alt="logo Vera")
 	.header__phone.phone
-		+svg-icon(svg-icon-name='phone').phone__icon
+		+svg-icon.phone__icon#phone__icon(svg-icon-name='phone')
 		a.phone__number(href='tel:+821075269192') + 82 (10) 7526-9192
+		+svg-icon.phone__close#phone__close(svg-icon-name='close')

@@ -1,14 +1,67 @@
 .header{
 	display: flex;
 	position: relative;
+	overflow: hidden;
+	min-height: 1300px;
 }
 .header__logo{
-	margin-left: 10px;
+	// margin-left: 10px;
 }
 .header__phone{
 	position: absolute;
-}
+	top: 0;
+	right: rem(-159);
 
+	transition: all .3s ease;
+	box-shadow: none;
+	border-radius: 0px 0px 0px 22px;
+	
+	padding: rem(30);
+	overflow: hidden;
+}
+.header__phone:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .3s ease .14s;
+	background-image: linear-gradient(286.41deg, #0B4D69 3.63%, #104C54 90.98%);
+}
+.phone--active {
+	right: 0;
+	
+	box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.35);
+	border-radius: 0px 0px 0px 22px;
+}
+.phone--active:before{
+	transition: opacity .1s ease 0s;
+	opacity: 1;
+}
 .phone__icon{
-	fill: url(#paint0_linear_1110_2);
+	position: relative;
+	fill: url(#gradient);
+	cursor: pointer;
+}
+.phone__close{
+	fill: #00E0FF;
+	position: relative;
+}
+.phone__number{
+	color: var(--color-master);
+	text-decoration: none;
+	font-weight: 300;
+	position: relative;
+	opacity: 0;
+	transition: opacity .3s ease .14s;
+}
+.phone__number:hover{
+	color: var(--color-master);
+}
+.phone--active .phone__number {
+	transition: opacity 0s ease 0s;
+	opacity: 1;
 }
