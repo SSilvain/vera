@@ -1,4 +1,6 @@
+include ../../pug/svg-icon/svg-icon.pug
 header.header
 	.header__logo.logo
 	.header__phone.phone
-		a.phone__number(href="tel:+821075269192") + 82 (10) 7526-9192
+		+svg-icon(svg-icon-name='phone').phone__icon
+		a.phone__number(href='tel:+821075269192') + 82 (10) 7526-9192
